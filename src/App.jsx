@@ -148,7 +148,7 @@ export default function App() {
           </p>
 
           <form
-            action="https://formspree.io/f/YOUR_FORM_ID"
+            action="https://formspree.io/f/xaqdevqz"
             method="POST"
             className="space-y-6 text-left bg-white p-8 rounded-xl shadow-sm"
           >
