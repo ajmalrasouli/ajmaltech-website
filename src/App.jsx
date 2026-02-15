@@ -5,7 +5,18 @@ export default function App() {
       {/* NAVBAR */}
       <header className="sticky top-0 bg-white shadow-sm z-50">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-5">
-          <h1 className="text-2xl font-bold text-blue-700">AjmalTech</h1>
+          
+      <a href="/" className="flex items-center space-x-2">
+        <img 
+          src="/logo.png" 
+          alt="AjmalTech Logo" 
+          className="h-10 w-auto"
+        />
+        <span className="text-xl font-semibold text-blue-700">
+          AjmalTech
+        </span>
+      </a>
+
           <nav className="hidden md:flex space-x-8 text-sm font-medium">
             <a href="#services" className="hover:text-blue-600">Services</a>
             <a href="#about" className="hover:text-blue-600">About</a>
