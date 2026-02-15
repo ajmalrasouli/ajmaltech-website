@@ -194,9 +194,30 @@ export default function App() {
       </section>
 
       {/* ================= FOOTER ================= */}
-      <footer className="bg-gray-100 border-t border-gray-200 py-10 text-center text-sm text-gray-500">
-        <p>Serving small offices & schools across London.</p>
-        <p className="mt-2">© {new Date().getFullYear()} AjmalTech</p>
+      <footer className="bg-gray-100 border-t border-gray-200 py-10 text-center text-sm text-gray-600">
+        <div className="max-w-4xl mx-auto px-6">
+          <p className="font-medium text-gray-800">
+            AjmalTech – IT Support for Small Offices & Schools in London
+          </p>
+
+          <p className="mt-2">
+            Email:{" "}
+            <a
+              href="mailto:ajmal@ajmaltech.com"
+              className="text-blue-600 hover:underline"
+            >
+              ajmal@ajmaltech.com
+            </a>
+          </p>
+
+          <p className="mt-2">
+            Serving Central, North, East, South & West London
+          </p>
+
+          <p className="mt-4 text-gray-500">
+            © {new Date().getFullYear()} AjmalTech. All rights reserved.
+          </p>
+        </div>
       </footer>
     </>
   );
