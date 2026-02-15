@@ -1,30 +1,105 @@
+import { useState } from "react";
+
 export default function App() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div className="font-sans text-gray-800 bg-white">
+    <>
+      {/* Header */}
+      <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex items-center justify-between py-5">
 
-      {/* NAVBAR */}
-      <header className="sticky top-0 bg-white shadow-sm z-50">
-        <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-5">
-          
-      <a href="/" className="flex items-center space-x-2">
-        <img 
-          src="/logo.png" 
-          alt="AjmalTech Logo" 
-          className="h-14 w-auto"
-        />
-        <span className="text-xl font-semibold text-blue-700">
-          AjmalTech
-        </span>
-      </a>
+            {/* Logo */}
+            <a href="/" className="flex items-center gap-3">
+              <div className="w-8 h-8 bg-blue-600 rounded-md"></div>
+              <span className="text-xl font-semibold text-gray-900 tracking-tight">
+                AjmalTech
+              </span>
+            </a>
 
-          <nav className="hidden md:flex space-x-8 text-sm font-medium">
-            <a href="#services" className="hover:text-blue-600">Services</a>
-            <a href="#about" className="hover:text-blue-600">About</a>
-            <a href="#plans" className="hover:text-blue-600">Plans</a>
-            <a href="#contact" className="hover:text-blue-600">Contact</a>
-          </nav>
+            {/* Desktop Nav */}
+            <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
+              <a href="#services" className="hover:text-gray-900 transition">
+                Services
+              </a>
+              <a href="#about" className="hover:text-gray-900 transition">
+                About
+              </a>
+              <a href="#plans" className="hover:text-gray-900 transition">
+                Plans
+              </a>
+              <a href="#contact" className="hover:text-gray-900 transition">
+                Contact
+              </a>
+            </nav>
+
+            {/* Desktop CTA */}
+            <a
+              href="#contact"
+              className="hidden md:inline-block bg-blue-600 text-white text-sm font-medium px-5 py-2 rounded-md hover:bg-blue-700 transition"
+            >
+              Book Consultation
+            </a>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="md:hidden text-gray-700"
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                {isOpen ? (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                ) : (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                )}
+              </svg>
+            </button>
+
+          </div>
         </div>
+
+        {/* Mobile Nav */}
+        {isOpen && (
+          <div className="md:hidden border-t border-gray-100">
+            <div className="px-6 py-4 space-y-4 text-sm font-medium text-gray-600">
+              <a href="#services" className="block hover:text-gray-900">
+                Services
+              </a>
+              <a href="#about" className="block hover:text-gray-900">
+                About
+              </a>
+              <a href="#plans" className="block hover:text-gray-900">
+                Plans
+              </a>
+              <a href="#contact" className="block hover:text-gray-900">
+                Contact
+              </a>
+              <a
+                href="#contact"
+                className="block bg-blue-600 text-white px-4 py-2 rounded-md text-center"
+              >
+                Book Consultation
+              </a>
+            </div>
+          </div>
+        )}
       </header>
+
 
       {/* HERO */}
       <section className="bg-gradient-to-r from-blue-50 to-white py-28">
