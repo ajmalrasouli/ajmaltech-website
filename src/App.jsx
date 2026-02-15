@@ -257,7 +257,6 @@ export default function App() {
       <footer className="bg-gray-100 py-8 text-center text-sm text-gray-500">
         © {new Date().getFullYear()} AjmalTech – IT Support in London
       </footer>
-
-    </div>
+    </>
   )
 }
