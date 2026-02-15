@@ -10,7 +10,7 @@ export default function App() {
         <img 
           src="/logo.png" 
           alt="AjmalTech Logo" 
-          className="h-10 w-auto"
+          className="h-14 w-auto"
         />
         <span className="text-xl font-semibold text-blue-700">
           AjmalTech
